@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "WQCustomComponent"
-s.version      = "0.0.3"
+s.version      = "0.0.2"
 s.summary      = "私人总结的插件"
 
 s.description  = <<-DESC
@@ -34,8 +34,8 @@ s.subspec 'WQWebview' do |webview|
 webview.source_files = "WQCustomComponent/WQWebview/*.{h,m}"
 end
 
-s.subspec 'WQScreenshotDrawView' do |scrseenshot|
-scrseenshot.source_files = "WQCustomComponent/WQScreenshotDrawView/*.{h,m}"
+s.subspec 'WQScreenshotDrawView' do |scrseenshotDrawView|
+scrseenshotDrawView = "WQCustomComponent/WQScreenshotDrawView/*.{h,m}"
 end
 
 s.subspec 'WQCacheManage' do |cacheManage|

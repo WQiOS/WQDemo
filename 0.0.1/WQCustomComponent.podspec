@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "WQCustomComponent"
-s.version      = "0.0.4"
+s.version      = "0.0.1"
 s.summary      = "私人总结的插件"
 
 s.description  = <<-DESC
@@ -24,21 +24,18 @@ s.requires_arc = true # 是否启用ARC
 s.source       = { :git => "https://github.com/WQiOS/WQCustomComponent.git", :tag => "#{s.version}" }
 
 s.ios.framework  = 'UIKit'
+s.default_subspec = 'WQDanmakuView'
 
 s.subspec 'WQDanmakuView' do |dandmakuView|
 dandmakuView.source_files = "WQCustomComponent/WQDanmakuView/*.{h,m}"
 end
 
 s.subspec 'WQWebview' do |webview|
-webview.source_files = "WQCustomComponent/WQWebview/*.{h,m}"
-end
-
-s.subspec 'WQScreenshotDrawView' do |scrseenshot|
-scrseenshot.source_files = "WQCustomComponent/WQScreenshotDrawView/*.{h,m}"
+webview.source_files = "WQDanmakuView/WQWebview/*.{h,m}"
 end
 
 s.subspec 'WQCacheManage' do |cacheManage|
-cacheManage.source_files = "WQCustomComponent/WQCacheManage/*.{h,m}"
+cacheManage.source_files = "WQDanmakuView/WQCacheManage/*.{h,m}"
 end
 
 end
